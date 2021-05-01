@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml"; 
+}
+<div class="header">
+    <h3>Products of PhoneMarket store </h3>
+</div>
+<div class="cont">
+   
+    <br />
+    <table class="styled-table" align="center">
+        <thead>
+            <tr class="active-row">
+
+                <td> Name</td>
+                <td>Producer</td>
+                <td>Price</td>
+                <td>&nbsp;</td>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var phones in ViewBag.Phones)
+                {
+                    <tr class="active-row">
+                        <td>@phones.Name</td>
+                        <td>@phones.Producer</td>
+                        <td>@phones.Price</td>
+                        <td><a href="/Home/Buy/@phones.Id">Buy</a></td>
+
+                    </tr>
+
+                }
+
+            }
+
+        </tbody>
+
+    </table>
+    </div>

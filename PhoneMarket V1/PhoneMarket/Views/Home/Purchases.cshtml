@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<div class="header">
+    <h3>Purchases</h3>
+</div>
+<div class="cont">
+
+    <br />
+    <table class="styled-table" align="center">
+        <thead>
+            <tr class="active-row">
+
+                <td> FIO</td>
+                <td>Email</td>
+                <td>Adress</td>
+                <td>&nbsp;</td>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var purchase in ViewBag.Purchase)
+                {
+                    <tr class="active-row">
+                        <td>@purchase.FIO</td>
+                        <td>@purchase.Email</td>
+                        <td>@purchase.Adress</td>
+                      
+
+                    </tr>
+
+                }
+
+            }
+
+        </tbody>
+
+    </table>
+</div>
